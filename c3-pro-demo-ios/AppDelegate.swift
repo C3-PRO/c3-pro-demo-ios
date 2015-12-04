@@ -23,6 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 		return true
 	}
 	
+	
+	// MARK: - Consenting
+	
+	func userDidConsent() {
+		print("You were just notified that the user consented. Now you want to show your app's setup process (set PIN, grant permissions).")
+		let splitViewController = self.window!.rootViewController as! UISplitViewController
+		let navi = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
+		navi.popToRootViewControllerAnimated(true)
+	}
+	
 
 	// MARK: - Split view
 

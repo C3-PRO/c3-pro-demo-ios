@@ -458,6 +458,7 @@
 				EE7DD4381C10E44A00CBD0E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

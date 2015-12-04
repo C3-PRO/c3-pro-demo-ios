@@ -23,6 +23,7 @@ class MasterViewController: UITableViewController {
 			C3DemoStudyIntro(),
 			C3DemoEligibility(),
 			C3DemoConsenting(),
+			C3DemoOverviewEligibilityConsent(),
 			C3DemoSignedConsentReview(),
 		]
 	}
