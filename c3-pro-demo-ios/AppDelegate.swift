@@ -52,8 +52,3 @@ extension UIViewController {
 	}
 }
 
-
-enum C3DemoError: ErrorType {
-	case AbstractClassUse
-}
-

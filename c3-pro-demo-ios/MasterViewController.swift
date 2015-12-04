@@ -25,6 +25,7 @@ class MasterViewController: UITableViewController {
 			C3DemoConsenting(),
 			C3DemoOverviewEligibilityConsent(),
 			C3DemoSignedConsentReview(),
+			C3DemoQuestionnaire(),
 		]
 	}
 	
@@ -88,12 +89,13 @@ class MasterViewController: UITableViewController {
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		let demo = demos[indexPath.row]
 		if demo.presentsModally {
-			do {
-				let viewController = try demo.viewController()
-				presentViewController(viewController, animated: true, completion: nil)
-			}
-			catch let error {
-				c3_alert("Something's Wrong", message: "\(error)")
+			demo.viewController() { viewController, error in
+				if let viewController = viewController {
+					self.presentViewController(viewController, animated: true, completion: nil)
+				}
+				else if let error = error {
+					self.c3_alert("Something's Wrong", message: "\(error)")
+				}
 			}
 		}
 	}

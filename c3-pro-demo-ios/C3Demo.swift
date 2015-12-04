@@ -8,16 +8,27 @@
 
 import UIKit
 import C3PRO
+import SMART
 
 
 protocol C3Demo {
 	var title: String { get }
 	var presentsModally: Bool { get }
 	func viewController() throws -> UIViewController
+	func viewController(callback: ((view: UIViewController?, error: ErrorType?) -> Void))
 }
 
 extension C3Demo {
 	var presentsModally: Bool { return false }
+	
+	func viewController(callback: ((view: UIViewController?, error: ErrorType?) -> Void)) {
+		do {
+			callback(view: try self.viewController(), error: nil)
+		}
+		catch let error {
+			callback(view: nil, error: error)
+		}
+	}
 }
 
 
@@ -102,7 +113,7 @@ class C3DemoConsenting: C3Demo {
 			onUserDidDecline: { taskController in
 				taskController.dismissViewControllerAnimated(true, completion: nil)
 				taskController.presentingViewController?.c3_alert("Declined!", message: "You did not consent")
-		})
+			})
 	}
 }
 
@@ -175,6 +186,56 @@ class C3DemoSignedConsentReview: C3Demo {
 			let alert = UIAlertController(title: "Signed Consent", message: "The signed consent is available once you've gone through consenting, agreed to and signed the consent", preferredStyle: .Alert)
 			alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
 			return alert
+		}
+	}
+}
+
+
+class C3DemoQuestionnaire: C3Demo {
+	
+	var title: String {
+		return "Survey / Questionnaire"
+	}
+	
+	var presentsModally: Bool {
+		return true
+	}
+	
+	lazy var controller = QuestionnaireController()
+	
+	func viewController() throws -> UIViewController {
+		throw C3Error.NotImplemented("Must use asynchronous method")
+	}
+	
+	func viewController(callback: ((view: UIViewController?, error: ErrorType?) -> Void)) {
+		do {
+			// get the questionnaire; to download one from a FHIR server you can use `Questionnaire.readFrom(...)` -- you probably want to use a cached one!
+			controller.questionnaire = (try NSBundle.mainBundle().fhir_bundledResource("Questionnaire-choices") as! Questionnaire)
+			
+			controller.whenCompleted = { viewController, answers in
+				viewController.dismissViewControllerAnimated(true, completion: nil)
+				if let answers = answers {
+					// you could now use the following to push the answers to a SMART on FHIR server:
+					// answers.create(<# smart.server #>) { error in [...] }
+					viewController.presentingViewController?.c3_alert("Survey Completed", message: "Survey is complete, answers have been logged to console")
+					print("\(answers):\n\(answers.asJSON())")
+				}
+			}
+			
+			controller.whenCancelledOrFailed = { viewController, error in
+				viewController.dismissViewControllerAnimated(true, completion: nil)
+				if let error = error {
+					viewController.presentingViewController?.c3_alert("Error", message: "\(error)")
+				}
+			}
+			
+			// prepare the questionnaire: this downloads referenced values if necessary, hence the asynchronous callback
+			controller.prepareQuestionnaireViewController() { viewController, error in
+				callback(view: viewController, error: error)
+			}
+		}
+		catch let error {
+			callback(view: nil, error: error)
 		}
 	}
 }
