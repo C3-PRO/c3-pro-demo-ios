@@ -240,3 +240,15 @@ class C3DemoQuestionnaire: C3Demo {
 	}
 }
 
+
+class C3DemoGeocoding: C3Demo {
+	
+	var title: String {
+		return "Geocoding"
+	}
+	
+	func viewController() throws -> UIViewController {
+		return GeoTableViewController(style: .Grouped)
+	}
+}
+

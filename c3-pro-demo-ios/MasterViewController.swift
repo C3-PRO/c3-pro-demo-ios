@@ -12,21 +12,24 @@ import C3PRO
 
 class MasterViewController: UITableViewController {
 	
-	var demos = [C3Demo]()
+	var demos = [[C3Demo]]()
 	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		// create demos
-		self.demos = [
+		self.demos = [[
 			C3DemoStudyIntro(),
 			C3DemoEligibility(),
 			C3DemoConsenting(),
 			C3DemoOverviewEligibilityConsent(),
 			C3DemoSignedConsentReview(),
+		],[
 			C3DemoQuestionnaire(),
-		]
+		],[
+			C3DemoGeocoding(),
+		]]
 	}
 	
 	override func viewWillAppear(animated: Bool) {
@@ -40,7 +43,7 @@ class MasterViewController: UITableViewController {
 	override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
 		if "showDetail" == identifier {
 			if let indexPath = self.tableView.indexPathForSelectedRow {
-				let demo = demos[indexPath.row]
+				let demo = demos[indexPath.section][indexPath.row]
 				return !demo.presentsModally
 			}
 		}
@@ -50,7 +53,7 @@ class MasterViewController: UITableViewController {
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if "showDetail" == segue.identifier {
 		    if let indexPath = self.tableView.indexPathForSelectedRow {
-		        let demo = demos[indexPath.row]
+				let demo = demos[indexPath.section][indexPath.row]
 				do {
 					let viewController = try demo.viewController()
 					if let navi = segue.destinationViewController as? UINavigationController {
@@ -71,23 +74,23 @@ class MasterViewController: UITableViewController {
 	// MARK: - Table View
 	
 	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-		return 1
+		return demos.count
 	}
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return demos.count
+		return demos[section].count
 	}
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-		let demo = demos[indexPath.row]
+		let demo = demos[indexPath.section][indexPath.row]
 		cell.textLabel?.text = demo.title
 		cell.accessoryType = demo.presentsModally ? .None : .DisclosureIndicator
 		return cell
 	}
 	
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		let demo = demos[indexPath.row]
+		let demo = demos[indexPath.section][indexPath.row]
 		if demo.presentsModally {
 			demo.viewController() { viewController, error in
 				if let viewController = viewController {
