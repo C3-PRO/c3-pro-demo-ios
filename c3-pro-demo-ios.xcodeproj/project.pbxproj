@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EE12094A1C1222B100E1D3CB /* Questionnaire-choices.json in Resources */ = {isa = PBXBuildFile; fileRef = EE1209491C1222B100E1D3CB /* Questionnaire-choices.json */; };
+		EE19B9851C6D2BC400B6F40F /* C3DemoSystemServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19B9841C6D2BC400B6F40F /* C3DemoSystemServices.swift */; };
+		EE19B9881C6D2C6D00B6F40F /* C3DemoConsenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19B9871C6D2C6D00B6F40F /* C3DemoConsenting.swift */; };
+		EE19B98A1C6D2CAE00B6F40F /* C3DemoQuestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19B9891C6D2CAE00B6F40F /* C3DemoQuestionnaire.swift */; };
 		EE63C3C81C2304E300F2CE24 /* GeoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE63C3C71C2304E300F2CE24 /* GeoTableViewController.swift */; };
 		EE7DD4261C10E44A00CBD0E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DD4251C10E44A00CBD0E6 /* AppDelegate.swift */; };
 		EE7DD4281C10E44A00CBD0E6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DD4271C10E44A00CBD0E6 /* MasterViewController.swift */; };
@@ -79,6 +82,9 @@
 
 /* Begin PBXFileReference section */
 		EE1209491C1222B100E1D3CB /* Questionnaire-choices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-choices.json"; path = "c3-pro-ios-framework/examples/Questionnaire-choices.json"; sourceTree = SOURCE_ROOT; };
+		EE19B9841C6D2BC400B6F40F /* C3DemoSystemServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoSystemServices.swift; sourceTree = "<group>"; };
+		EE19B9871C6D2C6D00B6F40F /* C3DemoConsenting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoConsenting.swift; sourceTree = "<group>"; };
+		EE19B9891C6D2CAE00B6F40F /* C3DemoQuestionnaire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoQuestionnaire.swift; sourceTree = "<group>"; };
 		EE63C3C71C2304E300F2CE24 /* GeoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoTableViewController.swift; sourceTree = "<group>"; };
 		EE7DD4221C10E44A00CBD0E6 /* c3-pro-demo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "c3-pro-demo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE7DD4251C10E44A00CBD0E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +162,9 @@
 				EE7DD4251C10E44A00CBD0E6 /* AppDelegate.swift */,
 				EE7DD4271C10E44A00CBD0E6 /* MasterViewController.swift */,
 				EE7DD4391C10E4DF00CBD0E6 /* C3Demo.swift */,
+				EE19B9871C6D2C6D00B6F40F /* C3DemoConsenting.swift */,
+				EE19B9891C6D2CAE00B6F40F /* C3DemoQuestionnaire.swift */,
+				EE19B9841C6D2BC400B6F40F /* C3DemoSystemServices.swift */,
 				EE7DD4541C10E88400CBD0E6 /* StudyIntro */,
 				EE7DD4611C10EC9E00CBD0E6 /* EligibilityConsenting */,
 				EE12094B1C1222B600E1D3CB /* Questionnaire */,
@@ -315,9 +324,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE19B9881C6D2C6D00B6F40F /* C3DemoConsenting.swift in Sources */,
 				EE7DD4281C10E44A00CBD0E6 /* MasterViewController.swift in Sources */,
 				EE63C3C81C2304E300F2CE24 /* GeoTableViewController.swift in Sources */,
 				EE7DD43A1C10E4DF00CBD0E6 /* C3Demo.swift in Sources */,
+				EE19B98A1C6D2CAE00B6F40F /* C3DemoQuestionnaire.swift in Sources */,
+				EE19B9851C6D2BC400B6F40F /* C3DemoSystemServices.swift in Sources */,
 				EE7DD4261C10E44A00CBD0E6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,6 +6,11 @@ C3-PRO iOS App Demo
 A simple iOS/Swift app demonstrating how the C3-PRO iOS framework can be used.
 
 
+## Learn
+
+All code needed are contained in individual `C3Demo` subclasses, take a look at the source files to see how things work.
+
+
 ## Swift vs. Objective-C
 
 The framework is written in Swift and not (usefully) usable from an Objective-C app.
