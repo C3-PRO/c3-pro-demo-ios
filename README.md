@@ -3,7 +3,7 @@ C3-PRO iOS App Demo
 
 > NOTE that the C3-PRO framework is not yet Open Source so you can't use this demo app just yet.
 
-A simple iOS/Swift app demonstrating how the C3-PRO iOS framework can be used.
+A simple iOS/Swift app demonstrating how the [C3-PRO iOS framework](https://github.com/chb/c3-pro-ios-framework) can be used.
 
 
 ## Learn
