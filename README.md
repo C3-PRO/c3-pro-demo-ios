@@ -1,20 +1,29 @@
 C3-PRO iOS App Demo
 ===================
 
-> NOTE that the C3-PRO framework is not yet Open Source so you can't use this demo app just yet.
-
 A simple iOS/Swift app demonstrating how the [C3-PRO iOS framework](https://github.com/chb/c3-pro-ios-framework) can be used.
 
 
 ## Learn
 
-All code needed are contained in individual `C3Demo` subclasses, take a look at the source files to see how things work.
+All code needed are contained in individual `C3Demo` subclasses, take a look at the source files to see how things work:
+
+Use Case               | Source File
+-----------------------|------------
+Study Intro            | [`C3DemoStudyIntro`](https://github.com/chb/c3-pro-demo-ios/blob/master/c3-pro-demo-ios/C3Demo.swift)
+Eligibility & Consent  | [`C3DemoEligibility`](https://github.com/chb/c3-pro-demo-ios/blob/master/c3-pro-demo-ios/C3Demo.swift)
+Consenting Only        | [`C3DemoConsenting`](https://github.com/chb/c3-pro-demo-ios/blob/master/c3-pro-demo-ios/C3DemoConsenting.swift)
+Overview & Eligibility & Consent | [`C3DemoOverviewEligibilityConsent`](https://github.com/chb/c3-pro-demo-ios/blob/master/c3-pro-demo-ios/C3DemoConsenting.swift)
+Signed Consent Review  | [`C3DemoSignedConsentReview`](https://github.com/chb/c3-pro-demo-ios/blob/master/c3-pro-demo-ios/C3DemoConsenting.swift)
+Survey / Questionnaire | [`C3DemoQuestionnaire`](https://github.com/chb/c3-pro-demo-ios/blob/master/c3-pro-demo-ios/C3DemoQuestionnaire.swift)
+System Services        | [`C3DemoSystemServices`](https://github.com/chb/c3-pro-demo-ios/blob/master/c3-pro-demo-ios/C3DemoSystemServices.swift)
+Geocoding              | [`C3DemoGeocoding`](https://github.com/chb/c3-pro-demo-ios/blob/master/c3-pro-demo-ios/C3Demo.swift)
 
 
 ## Swift vs. Objective-C
 
 The framework is written in Swift and not (usefully) usable from an Objective-C app.
-If you develop in Objective-C, we suggest you [**mix and match**](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html#//apple_ref/doc/uid/TP40014216-CH10-ID124) Swift and Objective-C within your app, meaning you interface with the C3-PRO through Swift.
+If you develop in Objective-C, we suggest you [**mix and match**](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html#//apple_ref/doc/uid/TP40014216-CH10-ID124) Swift and Objective-C within your app, meaning you interface with C3-PRO through Swift.
 This can be cut down to a minimum so should not impose a barrier too high on those not accustomed with Swift.
 
 
