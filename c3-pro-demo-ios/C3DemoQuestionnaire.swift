@@ -25,8 +25,12 @@ import SMART
 
 class C3DemoQuestionnaire: C3Demo {
 	
+	private var type: String {
+		return "nil"
+	}
+	
 	var title: String {
-		return "Survey / Questionnaire"
+		return "Survey / Questionnaire (\(type))"
 	}
 	
 	var presentsModally: Bool {
@@ -43,7 +47,7 @@ class C3DemoQuestionnaire: C3Demo {
 		do {
 			// get the questionnaire; to download one from a FHIR server you can use `Questionnaire.readFrom(...)` -- you probably want to use a cached one!
 			if nil == controller {
-				let questionnaire = (try NSBundle.mainBundle().fhir_bundledResource("Questionnaire-choices") as! Questionnaire)
+				let questionnaire = (try NSBundle.mainBundle().fhir_bundledResource("Questionnaire-\(type)") as! Questionnaire)
 				controller = QuestionnaireController(questionnaire: questionnaire)
 			}
 			
@@ -74,3 +78,28 @@ class C3DemoQuestionnaire: C3Demo {
 		}
 	}
 }
+
+
+class C3DemoQuestionnaireChoices: C3DemoQuestionnaire {
+	
+	override var type: String {
+		return "choices"
+	}
+}
+
+
+class C3DemoQuestionnaireTextValues: C3DemoQuestionnaire {
+	
+	override var type: String {
+		return "textvalues"
+	}
+}
+
+
+class C3DemoQuestionnaireDates: C3DemoQuestionnaire {
+	
+	override var type: String {
+		return "dates"
+	}
+}
+

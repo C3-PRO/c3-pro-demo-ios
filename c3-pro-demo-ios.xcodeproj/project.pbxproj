@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0BCD4E1C9028E700782325 /* Questionnaire-dates.json in Resources */ = {isa = PBXBuildFile; fileRef = EE0BCD4C1C9028E700782325 /* Questionnaire-dates.json */; };
+		EE0BCD4F1C9028E700782325 /* Questionnaire-textvalues.json in Resources */ = {isa = PBXBuildFile; fileRef = EE0BCD4D1C9028E700782325 /* Questionnaire-textvalues.json */; };
 		EE12094A1C1222B100E1D3CB /* Questionnaire-choices.json in Resources */ = {isa = PBXBuildFile; fileRef = EE1209491C1222B100E1D3CB /* Questionnaire-choices.json */; };
 		EE19B9851C6D2BC400B6F40F /* C3DemoSystemServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19B9841C6D2BC400B6F40F /* C3DemoSystemServices.swift */; };
 		EE19B9881C6D2C6D00B6F40F /* C3DemoConsenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19B9871C6D2C6D00B6F40F /* C3DemoConsenting.swift */; };
@@ -81,6 +83,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EE0BCD4C1C9028E700782325 /* Questionnaire-dates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-dates.json"; path = "c3-pro-ios-framework/examples/Questionnaire-dates.json"; sourceTree = SOURCE_ROOT; };
+		EE0BCD4D1C9028E700782325 /* Questionnaire-textvalues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-textvalues.json"; path = "c3-pro-ios-framework/examples/Questionnaire-textvalues.json"; sourceTree = SOURCE_ROOT; };
 		EE1209491C1222B100E1D3CB /* Questionnaire-choices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-choices.json"; path = "c3-pro-ios-framework/examples/Questionnaire-choices.json"; sourceTree = SOURCE_ROOT; };
 		EE19B9841C6D2BC400B6F40F /* C3DemoSystemServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoSystemServices.swift; sourceTree = "<group>"; };
 		EE19B9871C6D2C6D00B6F40F /* C3DemoConsenting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoConsenting.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				EE1209491C1222B100E1D3CB /* Questionnaire-choices.json */,
+				EE0BCD4C1C9028E700782325 /* Questionnaire-dates.json */,
+				EE0BCD4D1C9028E700782325 /* Questionnaire-textvalues.json */,
 			);
 			name = Questionnaire;
 			sourceTree = "<group>";
@@ -300,8 +306,10 @@
 				EE7DD45B1C10E88400CBD0E6 /* Intro.css in Resources */,
 				EE7DD4701C1103D500CBD0E6 /* logo_disease_researchInstitute@2x.png in Resources */,
 				EE7DD45C1C10E88400CBD0E6 /* Intro_about.html in Resources */,
+				EE0BCD4F1C9028E700782325 /* Questionnaire-textvalues.json in Resources */,
 				EE7DD4601C10E88400CBD0E6 /* StudyIntro.storyboard in Resources */,
 				EE7DD4321C10E44A00CBD0E6 /* LaunchScreen.storyboard in Resources */,
+				EE0BCD4E1C9028E700782325 /* Questionnaire-dates.json in Resources */,
 				EE7DD45F1C10E88400CBD0E6 /* StudyIntro.json in Resources */,
 				EE7DD46E1C11033400CBD0E6 /* logo_disease_large@2x.png in Resources */,
 				EE7DD46C1C10F51B00CBD0E6 /* Consent_sharing.html in Resources */,

@@ -38,7 +38,9 @@ class MasterViewController: UITableViewController {
 			C3DemoOverviewEligibilityConsent(),
 			C3DemoSignedConsentReview(),
 		],[
-			C3DemoQuestionnaire(),
+			C3DemoQuestionnaireChoices(),
+			C3DemoQuestionnaireTextValues(),
+			C3DemoQuestionnaireDates(),
 		],[
 			C3DemoSystemServices(),
 		],[
