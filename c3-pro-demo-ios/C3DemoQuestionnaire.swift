@@ -47,8 +47,9 @@ class C3DemoQuestionnaire: C3Demo {
 		do {
 			// get the questionnaire; to download one from a FHIR server you can use `Questionnaire.readFrom(...)` -- you probably want to use a cached one!
 			if nil == controller {
-				let questionnaire = (try NSBundle.mainBundle().fhir_bundledResource("Questionnaire-\(type)") as! Questionnaire)
+				let questionnaire = try NSBundle.mainBundle().fhir_bundledResource("Questionnaire-\(type)", type: Questionnaire.self)
 				controller = QuestionnaireController(questionnaire: questionnaire)
+				controller?.logger = OAuth2DebugLogger()
 			}
 			
 			controller!.whenCompleted = { viewController, answers in
@@ -57,7 +58,14 @@ class C3DemoQuestionnaire: C3Demo {
 					// you could now use the following to push the answers to a SMART on FHIR server:
 					// answers.create(<# smart.server #>) { error in [...] }
 					viewController.presentingViewController?.c3_alert("Survey Completed", message: "Survey is complete, answers have been logged to console")
-					print("\(answers):\n\(answers.asJSON())")
+					do {
+						let data = try NSJSONSerialization.dataWithJSONObject(answers.asJSON(), options: .PrettyPrinted)
+						let json = String(data: data, encoding: NSUTF8StringEncoding)
+						print("\(answers):\n\(json ?? "")")
+					}
+					catch let error {
+						print("Failed to serialize response as JSON: \(error)")
+					}
 				}
 			}
 			
