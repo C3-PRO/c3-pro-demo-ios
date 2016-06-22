@@ -83,12 +83,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EE0BCD4C1C9028E700782325 /* Questionnaire-dates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-dates.json"; path = "c3-pro-ios-framework/examples/Questionnaire-dates.json"; sourceTree = SOURCE_ROOT; };
-		EE0BCD4D1C9028E700782325 /* Questionnaire-textvalues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-textvalues.json"; path = "c3-pro-ios-framework/examples/Questionnaire-textvalues.json"; sourceTree = SOURCE_ROOT; };
-		EE1209491C1222B100E1D3CB /* Questionnaire-choices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-choices.json"; path = "c3-pro-ios-framework/examples/Questionnaire-choices.json"; sourceTree = SOURCE_ROOT; };
+		EE0BCD4C1C9028E700782325 /* Questionnaire-dates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-dates.json"; path = "c3-pro-ios-framework/examples/Questionnaire/Questionnaire-dates.json"; sourceTree = SOURCE_ROOT; };
+		EE0BCD4D1C9028E700782325 /* Questionnaire-textvalues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-textvalues.json"; path = "c3-pro-ios-framework/examples/Questionnaire/Questionnaire-textvalues.json"; sourceTree = SOURCE_ROOT; };
+		EE1209491C1222B100E1D3CB /* Questionnaire-choices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-choices.json"; path = "c3-pro-ios-framework/examples/Questionnaire/Questionnaire-choices.json"; sourceTree = SOURCE_ROOT; };
 		EE19B9841C6D2BC400B6F40F /* C3DemoSystemServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoSystemServices.swift; sourceTree = "<group>"; };
 		EE19B9871C6D2C6D00B6F40F /* C3DemoConsenting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoConsenting.swift; sourceTree = "<group>"; };
 		EE19B9891C6D2CAE00B6F40F /* C3DemoQuestionnaire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoQuestionnaire.swift; sourceTree = "<group>"; };
+		EE2AF4CF1D1ADDD900E6F5AD /* QuestionnaireResponse-choices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "QuestionnaireResponse-choices.json"; path = "c3-pro-ios-framework/examples/QuestionnaireResponse/QuestionnaireResponse-choices.json"; sourceTree = SOURCE_ROOT; };
+		EE2AF4D01D1ADDD900E6F5AD /* QuestionnaireResponse-dates.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "QuestionnaireResponse-dates.json"; path = "c3-pro-ios-framework/examples/QuestionnaireResponse/QuestionnaireResponse-dates.json"; sourceTree = SOURCE_ROOT; };
+		EE2AF4D11D1ADDD900E6F5AD /* QuestionnaireResponse-textvalues.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "QuestionnaireResponse-textvalues.json"; path = "c3-pro-ios-framework/examples/QuestionnaireResponse/QuestionnaireResponse-textvalues.json"; sourceTree = SOURCE_ROOT; };
 		EE63C3C71C2304E300F2CE24 /* GeoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoTableViewController.swift; sourceTree = "<group>"; };
 		EE7DD4221C10E44A00CBD0E6 /* c3-pro-demo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "c3-pro-demo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE7DD4251C10E44A00CBD0E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,8 +133,11 @@
 			isa = PBXGroup;
 			children = (
 				EE1209491C1222B100E1D3CB /* Questionnaire-choices.json */,
+				EE2AF4CF1D1ADDD900E6F5AD /* QuestionnaireResponse-choices.json */,
 				EE0BCD4C1C9028E700782325 /* Questionnaire-dates.json */,
+				EE2AF4D01D1ADDD900E6F5AD /* QuestionnaireResponse-dates.json */,
 				EE0BCD4D1C9028E700782325 /* Questionnaire-textvalues.json */,
+				EE2AF4D11D1ADDD900E6F5AD /* QuestionnaireResponse-textvalues.json */,
 			);
 			name = Questionnaire;
 			sourceTree = "<group>";
