@@ -80,7 +80,7 @@ class C3DemoOverviewEligibilityConsent: C3Demo {
 			
 			// subscribe our app delegate to the did-consent notification; we simply pop out, in real life you want to start app setup (PIN, permissions)
 			let center = NSNotificationCenter.defaultCenter()
-			center.addObserver(UIApplication.sharedApplication().delegate!, selector: "userDidConsent", name: C3UserDidConsentNotification, object: nil)
+			center.addObserver(UIApplication.sharedApplication().delegate!, selector: Selector("userDidConsent"), name: C3UserDidConsentNotification, object: nil)
 			
 			// show eligibility view controller when the user wants to your your study
 			let elig = controller.eligibilityStatusViewController(intro.config)

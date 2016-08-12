@@ -83,9 +83,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EE0BCD4C1C9028E700782325 /* Questionnaire-dates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-dates.json"; path = "c3-pro-ios-framework/examples/Questionnaire-dates.json"; sourceTree = SOURCE_ROOT; };
-		EE0BCD4D1C9028E700782325 /* Questionnaire-textvalues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-textvalues.json"; path = "c3-pro-ios-framework/examples/Questionnaire-textvalues.json"; sourceTree = SOURCE_ROOT; };
-		EE1209491C1222B100E1D3CB /* Questionnaire-choices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-choices.json"; path = "c3-pro-ios-framework/examples/Questionnaire-choices.json"; sourceTree = SOURCE_ROOT; };
+		EE0BCD4C1C9028E700782325 /* Questionnaire-dates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Questionnaire-dates.json"; sourceTree = "<group>"; };
+		EE0BCD4D1C9028E700782325 /* Questionnaire-textvalues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Questionnaire-textvalues.json"; sourceTree = "<group>"; };
+		EE1209491C1222B100E1D3CB /* Questionnaire-choices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Questionnaire-choices.json"; sourceTree = "<group>"; };
 		EE19B9841C6D2BC400B6F40F /* C3DemoSystemServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoSystemServices.swift; sourceTree = "<group>"; };
 		EE19B9871C6D2C6D00B6F40F /* C3DemoConsenting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoConsenting.swift; sourceTree = "<group>"; };
 		EE19B9891C6D2CAE00B6F40F /* C3DemoQuestionnaire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoQuestionnaire.swift; sourceTree = "<group>"; };
@@ -134,6 +134,7 @@
 				EE0BCD4D1C9028E700782325 /* Questionnaire-textvalues.json */,
 			);
 			name = Questionnaire;
+			path = "../c3-pro-ios-framework/examples/Questionnaire";
 			sourceTree = "<group>";
 		};
 		EE63C3C51C2304A600F2CE24 /* Geocoding */ = {
