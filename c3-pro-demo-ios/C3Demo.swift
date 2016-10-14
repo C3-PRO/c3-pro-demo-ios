@@ -27,18 +27,18 @@ protocol C3Demo {
 	var title: String { get }
 	var presentsModally: Bool { get }
 	func viewController() throws -> UIViewController
-	func viewController(callback: ((view: UIViewController?, error: ErrorType?) -> Void))
+	func viewController(_ callback: @escaping ((_ view: UIViewController?, _ error: Error?) -> Void))
 }
 
 extension C3Demo {
 	var presentsModally: Bool { return false }
 	
-	func viewController(callback: ((view: UIViewController?, error: ErrorType?) -> Void)) {
+	func viewController(_ callback: @escaping ((_ view: UIViewController?, _ error: Error?) -> Void)) {
 		do {
-			callback(view: try self.viewController(), error: nil)
+			callback(try self.viewController(), nil)
 		}
 		catch let error {
-			callback(view: nil, error: error)
+			callback(nil, error)
 		}
 	}
 }
@@ -53,14 +53,14 @@ class C3DemoStudyIntro: C3Demo {
 	func viewController() throws -> UIViewController {
 		
 		// instantiate from the "StudyIntro" storyboard, and apply the "StudyIntro.json" configuration
-		let intro = try StudyIntroCollectionViewController.fromStoryboard("StudyIntro")
+		let intro = try StudyIntroCollectionViewController.fromStoryboard(named: "StudyIntro")
 		intro.config = try StudyIntroConfiguration(json: "StudyIntro")
 		
 		// here you can configure what happens when the user taps the "Join Study" button. Usually this will start eligibility checking.
 		intro.onJoinStudy = { controller in
-			let alert = UIAlertController(title: "Join Study", message: "For next steps, look at “Eligibility & Consent”", preferredStyle: .Alert)
-			alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
-			controller.presentViewController(alert, animated: true, completion: nil)
+			let alert = UIAlertController(title: "Join Study", message: "For next steps, look at “Eligibility & Consent”", preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+			controller.present(alert, animated: true, completion: nil)
 		}
 		
 		// for demo purposes we don't want to hide the navigation bar. If it is your front view controller you probably want this to stay true.
@@ -80,10 +80,10 @@ class C3DemoEligibility: C3Demo {
 	
 	func viewController() throws -> UIViewController {
 		if nil == controller {
-			controller = ConsentController(bundledContract: "Consent")
+			controller = try ConsentController(bundledContract: "Consent")
 		}
 		guard let controller = controller else {
-			throw C3Error.BundleFileNotFound("Consent")
+			throw C3Error.bundleFileNotFound("Consent")
 		}
 		
 		// providing a config is optional. It allows you to customize some "you're eligible" messages
@@ -102,7 +102,7 @@ class C3DemoGeocoding: C3Demo {
 	}
 	
 	func viewController() throws -> UIViewController {
-		return GeoTableViewController(style: .Grouped)
+		return GeoTableViewController(style: .grouped)
 	}
 }
 

@@ -36,21 +36,21 @@ class C3DemoConsenting: C3Demo {
 	
 	func viewController() throws -> UIViewController {
 		if nil == controller {
-			controller = ConsentController(bundledContract: "Consent")
+			controller = try ConsentController(bundledContract: "Consent")
 		}
 		guard let controller = controller else {
-			throw C3Error.BundleFileNotFound("Consent")
+			throw C3Error.bundleFileNotFound("Consent")
 		}
 		
 		// instantiate a consent view controller that simply produces an alert when consenting and when declining
 		return try controller.consentViewController(
 			onUserDidConsent: { taskController, result in
-				let pdf = controller.dynamicType.signedConsentPDFURL()
-				taskController.dismissViewControllerAnimated(true, completion: nil)
+				let pdf = type(of: controller).signedConsentPDFURL()
+				taskController.dismiss(animated: true)
 				taskController.presentingViewController?.c3_alert("Consented", message: "The signed PDF is at «\(pdf)»")
 			},
 			onUserDidDecline: { taskController in
-				taskController.dismissViewControllerAnimated(true, completion: nil)
+				taskController.dismiss(animated: true)
 				taskController.presentingViewController?.c3_alert("Declined!", message: "You did not consent")
 		})
 	}
@@ -67,20 +67,20 @@ class C3DemoOverviewEligibilityConsent: C3Demo {
 	
 	func viewController() throws -> UIViewController {
 		if nil == controller {
-			controller = ConsentController(bundledContract: "Consent")		// we want to hold on to our controller
+			controller = try ConsentController(bundledContract: "Consent")		// we want to hold on to our controller
 		}
 		guard let controller = controller else {
-			throw C3Error.BundleFileNotFound("Consent")
+			throw C3Error.bundleFileNotFound("Consent")
 		}
 		
 		// instantiate from the "StudyIntro" storyboard, and apply the "StudyIntro.json" configuration
-		let intro = try StudyIntroCollectionViewController.fromStoryboard("StudyIntro")
+		let intro = try StudyIntroCollectionViewController.fromStoryboard(named: "StudyIntro")
 		intro.config = try StudyIntroConfiguration(json:"StudyIntro")
 		intro.onJoinStudy = { viewController in
 			
 			// subscribe our app delegate to the did-consent notification; we simply pop out, in real life you want to start app setup (PIN, permissions)
-			let center = NSNotificationCenter.defaultCenter()
-			center.addObserver(UIApplication.sharedApplication().delegate!, selector: Selector("userDidConsent"), name: C3UserDidConsentNotification, object: nil)
+			let center = NotificationCenter.default
+			center.addObserver(UIApplication.shared.delegate!, selector: Selector("userDidConsent"), name: C3UserDidConsentNotification, object: nil)
 			
 			// show eligibility view controller when the user wants to your your study
 			let elig = controller.eligibilityStatusViewController(intro.config)
@@ -116,14 +116,14 @@ class C3DemoSignedConsentReview: C3Demo {
 			let pdfVC = PDFViewController()
 			pdfVC.title = NSLocalizedString("Consent", comment: "")
 			
-			dispatch_async(dispatch_get_main_queue()) {
+			DispatchQueue.main.async {
 				pdfVC.loadPDFDataFrom(url)
 			}
 			return pdfVC
 		}
 		else {
-			let alert = UIAlertController(title: "Signed Consent", message: "The signed consent is available once you've gone through consenting, agreed to and signed the consent", preferredStyle: .Alert)
-			alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
+			let alert = UIAlertController(title: "Signed Consent", message: "The signed consent is available once you've gone through consenting, agreed to and signed the consent", preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
 			return alert
 		}
 	}

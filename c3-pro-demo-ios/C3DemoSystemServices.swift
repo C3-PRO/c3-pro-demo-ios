@@ -39,28 +39,28 @@ class C3DemoSystemServices: C3Demo {
 		
 		// we want to read sex and DOB from HealthKit (characteristics) and some measurements (quantities)
 		let hkCRead = Set<HKCharacteristicType>([
-			HKCharacteristicType.characteristicTypeForIdentifier(HKCharacteristicTypeIdentifierBiologicalSex)!,
-			HKCharacteristicType.characteristicTypeForIdentifier(HKCharacteristicTypeIdentifierDateOfBirth)!,
+			HKCharacteristicType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.biologicalSex)!,
+			HKCharacteristicType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.dateOfBirth)!,
 			])
 		let hkQRead = Set<HKQuantityType>([
-			HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)!,
-			HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!,
-			HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)!,
-			HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierFlightsClimbed)!,
-			HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierActiveEnergyBurned)!,
+			HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.height)!,
+			HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!,
+			HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)!,
+			HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.flightsClimbed)!,
+			HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.activeEnergyBurned)!,
 			])
 		let hkTypes = HealthKitTypes(readCharacteristics: hkCRead, readQuantities: hkQRead, writeQuantities: Set())
 		
 		return [
-			SystemService.LocalNotifications(notificationSet),
-			SystemService.CoreMotion,
-			SystemService.GeoLocationWhenUsing("Access to your current location allows us to determine the state you live in so we can detect local disease trends."),
-			SystemService.HealthKit(hkTypes),
+			SystemService.localNotifications(notificationSet),
+			SystemService.coreMotion,
+			SystemService.geoLocationWhenUsing("Access to your current location allows us to determine the state you live in so we can detect local disease trends."),
+			SystemService.healthKit(hkTypes),
 		]
 	}
 	
 	func viewController() throws -> UIViewController {
-		let vc = SystemPermissionTableViewController(style: .Plain)
+		let vc = SystemPermissionTableViewController(style: .plain)
 		vc.services = desiredSystemServices()
 		return vc
 	}

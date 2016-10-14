@@ -35,6 +35,12 @@
 		EE7DD4781C110CB800CBD0E6 /* video_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7DD4771C110CB800CBD0E6 /* video_icon.png */; };
 		EE7DD47B1C110D7500CBD0E6 /* 1_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = EE7DD4791C110D7500CBD0E6 /* 1_overview.html */; };
 		EE7DD47C1C110D7500CBD0E6 /* 2_activity.html in Resources */ = {isa = PBXBuildFile; fileRef = EE7DD47A1C110D7500CBD0E6 /* 2_activity.html */; };
+		EEEAD0DD1DAF81C200A665CE /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEAD0DA1DAF81B600A665CE /* ResearchKit.framework */; };
+		EEEAD0DE1DAF81C200A665CE /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEEAD0DA1DAF81B600A665CE /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEEAD0E11DAF81C200A665CE /* SMART.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEAD0CC1DAF81A800A665CE /* SMART.framework */; };
+		EEEAD0E21DAF81C200A665CE /* SMART.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEEAD0CC1DAF81A800A665CE /* SMART.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEEAD0FD1DAF81EF00A665CE /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEAD0F01DAF81EA00A665CE /* SQLite.framework */; };
+		EEEAD0FE1DAF81EF00A665CE /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEEAD0F01DAF81EA00A665CE /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +72,132 @@
 			remoteGlobalIDString = EEFA84BA1AE5C18B00E61006;
 			remoteInfo = C3PRO;
 		};
+		EEEAD0CB1DAF81A800A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE43B1A919546D880017679A;
+			remoteInfo = "SwiftSMART-iOS";
+		};
+		EEEAD0CD1DAF81A800A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE43B1B319546D880017679A;
+			remoteInfo = "SwiftSMART-iOSTests";
+		};
+		EEEAD0CF1DAF81A800A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EECAA7831A5D3DE60062C64B;
+			remoteInfo = "SwiftSMART-OSX";
+		};
+		EEEAD0D11DAF81A800A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE13AA921A5D44D100B901FD;
+			remoteInfo = "SwiftSMART-OSXTests";
+		};
+		EEEAD0D91DAF81B600A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0D31DAF81B500A665CE /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		EEEAD0DB1DAF81B600A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0D31DAF81B500A665CE /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		EEEAD0DF1DAF81C200A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0D31DAF81B500A665CE /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		EEEAD0E31DAF81C200A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE43B1A819546D880017679A;
+			remoteInfo = "SwiftSMART-iOS";
+		};
+		EEEAD0EF1DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+		EEEAD0F11DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
+			remoteInfo = "SQLiteTests iOS";
+		};
+		EEEAD0F31DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
+			remoteInfo = "SQLite Mac";
+		};
+		EEEAD0F51DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
+			remoteInfo = "SQLiteTests Mac";
+		};
+		EEEAD0F71DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
+			remoteInfo = "SQLite tvOS";
+		};
+		EEEAD0F91DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
+			remoteInfo = "SQLiteTests tvOS";
+		};
+		EEEAD0FB1DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A121AC451CA35C79005A31D1;
+			remoteInfo = "SQLite watchOS";
+		};
+		EEEAD0FF1DAF81EF00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE247AD21C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+		EEEAD1061DAF820300A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD1011DAF820300A665CE /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE45519693E190098E6F3;
+			remoteInfo = CryptoSwift;
+		};
+		EEEAD1081DAF820300A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD1011DAF820300A665CE /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE46019693E190098E6F3;
+			remoteInfo = Tests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,7 +207,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EEEAD0DE1DAF81C200A665CE /* ResearchKit.framework in Embed Frameworks */,
 				EE7DD44B1C10E69C00CBD0E6 /* C3PRO.framework in Embed Frameworks */,
+				EEEAD0FE1DAF81EF00A665CE /* SQLite.framework in Embed Frameworks */,
+				EEEAD0E21DAF81C200A665CE /* SMART.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +247,10 @@
 		EE7DD4771C110CB800CBD0E6 /* video_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_icon.png; sourceTree = "<group>"; };
 		EE7DD4791C110D7500CBD0E6 /* 1_overview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 1_overview.html; sourceTree = "<group>"; };
 		EE7DD47A1C110D7500CBD0E6 /* 2_activity.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 2_activity.html; sourceTree = "<group>"; };
+		EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftSMART.xcodeproj; path = "c3-pro-ios-framework/Swift-SMART/SwiftSMART.xcodeproj"; sourceTree = "<group>"; };
+		EEEAD0D31DAF81B500A665CE /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "c3-pro-ios-framework/ResearchKit/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
+		EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "c3-pro-ios-framework/SQLiteSwift/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		EEEAD1011DAF820300A665CE /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = "c3-pro-ios-framework/CryptoSwift/CryptoSwift.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +258,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEEAD0DD1DAF81C200A665CE /* ResearchKit.framework in Frameworks */,
 				EE7DD44A1C10E69C00CBD0E6 /* C3PRO.framework in Frameworks */,
+				EEEAD0FD1DAF81EF00A665CE /* SQLite.framework in Frameworks */,
+				EEEAD0E11DAF81C200A665CE /* SMART.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +291,10 @@
 		EE7DD4191C10E44A00CBD0E6 = {
 			isa = PBXGroup;
 			children = (
+				EEEAD1011DAF820300A665CE /* CryptoSwift.xcodeproj */,
+				EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */,
+				EEEAD0D31DAF81B500A665CE /* ResearchKit.xcodeproj */,
+				EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */,
 				EE7DD4241C10E44A00CBD0E6 /* c3-pro-demo-ios */,
 				EE7DD43B1C10E68800CBD0E6 /* C3PRO.xcodeproj */,
 				EE7DD4231C10E44A00CBD0E6 /* Products */,
@@ -220,6 +366,49 @@
 			path = EligibilityConsenting;
 			sourceTree = SOURCE_ROOT;
 		};
+		EEEAD0C41DAF81A800A665CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEEAD0CC1DAF81A800A665CE /* SMART.framework */,
+				EEEAD0CE1DAF81A800A665CE /* SwiftSMART-iOSTests.xctest */,
+				EEEAD0D01DAF81A800A665CE /* SMART.framework */,
+				EEEAD0D21DAF81A800A665CE /* SwiftSMART-OSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEEAD0D41DAF81B500A665CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEEAD0DA1DAF81B600A665CE /* ResearchKit.framework */,
+				EEEAD0DC1DAF81B600A665CE /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEEAD0E61DAF81E900A665CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEEAD0F01DAF81EA00A665CE /* SQLite.framework */,
+				EEEAD0F21DAF81EA00A665CE /* SQLiteTests iOS.xctest */,
+				EEEAD0F41DAF81EA00A665CE /* SQLite.framework */,
+				EEEAD0F61DAF81EA00A665CE /* SQLiteTests Mac.xctest */,
+				EEEAD0F81DAF81EA00A665CE /* SQLite.framework */,
+				EEEAD0FA1DAF81EA00A665CE /* SQLiteTests tvOS.xctest */,
+				EEEAD0FC1DAF81EA00A665CE /* SQLite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEEAD1021DAF820300A665CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEEAD1071DAF820300A665CE /* CryptoSwift.framework */,
+				EEEAD1091DAF820300A665CE /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,6 +426,9 @@
 			dependencies = (
 				EE7DD4491C10E69600CBD0E6 /* PBXTargetDependency */,
 				EE7DD44D1C10E69C00CBD0E6 /* PBXTargetDependency */,
+				EEEAD0E01DAF81C200A665CE /* PBXTargetDependency */,
+				EEEAD0E41DAF81C200A665CE /* PBXTargetDependency */,
+				EEEAD1001DAF81EF00A665CE /* PBXTargetDependency */,
 			);
 			name = "c3-pro-demo-ios";
 			productName = "c3-pro-demo-ios";
@@ -250,11 +442,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Boston Children's Hospital";
 				TargetAttributes = {
 					EE7DD4211C10E44A00CBD0E6 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = Q3B26TNSSH;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -273,6 +467,22 @@
 				{
 					ProductGroup = EE7DD43C1C10E68800CBD0E6 /* Products */;
 					ProjectRef = EE7DD43B1C10E68800CBD0E6 /* C3PRO.xcodeproj */;
+				},
+				{
+					ProductGroup = EEEAD1021DAF820300A665CE /* Products */;
+					ProjectRef = EEEAD1011DAF820300A665CE /* CryptoSwift.xcodeproj */;
+				},
+				{
+					ProductGroup = EEEAD0D41DAF81B500A665CE /* Products */;
+					ProjectRef = EEEAD0D31DAF81B500A665CE /* ResearchKit.xcodeproj */;
+				},
+				{
+					ProductGroup = EEEAD0E61DAF81E900A665CE /* Products */;
+					ProjectRef = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+				},
+				{
+					ProductGroup = EEEAD0C41DAF81A800A665CE /* Products */;
+					ProjectRef = EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -295,6 +505,111 @@
 			fileType = wrapper.cfbundle;
 			path = C3PROTests.xctest;
 			remoteRef = EE7DD4461C10E68900CBD0E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0CC1DAF81A800A665CE /* SMART.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SMART.framework;
+			remoteRef = EEEAD0CB1DAF81A800A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0CE1DAF81A800A665CE /* SwiftSMART-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftSMART-iOSTests.xctest";
+			remoteRef = EEEAD0CD1DAF81A800A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0D01DAF81A800A665CE /* SMART.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SMART.framework;
+			remoteRef = EEEAD0CF1DAF81A800A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0D21DAF81A800A665CE /* SwiftSMART-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftSMART-OSXTests.xctest";
+			remoteRef = EEEAD0D11DAF81A800A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0DA1DAF81B600A665CE /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = EEEAD0D91DAF81B600A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0DC1DAF81B600A665CE /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = EEEAD0DB1DAF81B600A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0F01DAF81EA00A665CE /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = EEEAD0EF1DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0F21DAF81EA00A665CE /* SQLiteTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests iOS.xctest";
+			remoteRef = EEEAD0F11DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0F41DAF81EA00A665CE /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = EEEAD0F31DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0F61DAF81EA00A665CE /* SQLiteTests Mac.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests Mac.xctest";
+			remoteRef = EEEAD0F51DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0F81DAF81EA00A665CE /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = EEEAD0F71DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0FA1DAF81EA00A665CE /* SQLiteTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests tvOS.xctest";
+			remoteRef = EEEAD0F91DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0FC1DAF81EA00A665CE /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = EEEAD0FB1DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD1071DAF820300A665CE /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = EEEAD1061DAF820300A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD1091DAF820300A665CE /* Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.xctest;
+			remoteRef = EEEAD1081DAF820300A665CE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -356,6 +671,21 @@
 			name = C3PRO;
 			targetProxy = EE7DD44C1C10E69C00CBD0E6 /* PBXContainerItemProxy */;
 		};
+		EEEAD0E01DAF81C200A665CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = EEEAD0DF1DAF81C200A665CE /* PBXContainerItemProxy */;
+		};
+		EEEAD0E41DAF81C200A665CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftSMART-iOS";
+			targetProxy = EEEAD0E31DAF81C200A665CE /* PBXContainerItemProxy */;
+		};
+		EEEAD1001DAF81EF00A665CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SQLite iOS";
+			targetProxy = EEEAD0FF1DAF81EF00A665CE /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -391,8 +721,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -436,8 +768,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -456,6 +790,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -464,24 +799,28 @@
 		EE7DD4371C10E44A00CBD0E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = Q3B26TNSSH;
 				INFOPLIST_FILE = "c3-pro-demo-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.chip.c3-pro.c3-pro-demo-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		EE7DD4381C10E44A00CBD0E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = Q3B26TNSSH;
 				INFOPLIST_FILE = "c3-pro-demo-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.chip.c3-pro.c3-pro-demo-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

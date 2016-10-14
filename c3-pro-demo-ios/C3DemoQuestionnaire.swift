@@ -25,7 +25,7 @@ import SMART
 
 class C3DemoQuestionnaire: C3Demo {
 	
-	private var type: String {
+	fileprivate var type: String {
 		return "nil"
 	}
 	
@@ -40,19 +40,19 @@ class C3DemoQuestionnaire: C3Demo {
 	var controller: QuestionnaireController?
 	
 	func viewController() throws -> UIViewController {
-		throw C3Error.NotImplemented("Must use asynchronous method")
+		throw C3Error.notImplemented("Must use asynchronous method")
 	}
 	
-	func viewController(callback: ((view: UIViewController?, error: ErrorType?) -> Void)) {
+	func viewController(_ callback: @escaping ((_ view: UIViewController?, _ error: Error?) -> Void)) {
 		do {
 			// get the questionnaire; to download one from a FHIR server you can use `Questionnaire.readFrom(...)` -- you probably want to use a cached one!
 			if nil == controller {
-				let questionnaire = (try NSBundle.mainBundle().fhir_bundledResource("Questionnaire-\(type)") as! Questionnaire)
+				let questionnaire = try Bundle.main.fhir_bundledResource("Questionnaire-\(type)", type: Questionnaire.self)
 				controller = QuestionnaireController(questionnaire: questionnaire)
 			}
 			
 			controller!.whenCompleted = { viewController, answers in
-				viewController.dismissViewControllerAnimated(true, completion: nil)
+				viewController.dismiss(animated: true)
 				if let answers = answers {
 					// you could now use the following to push the answers to a SMART on FHIR server:
 					// answers.create(<# smart.server #>) { error in [...] }
@@ -62,7 +62,7 @@ class C3DemoQuestionnaire: C3Demo {
 			}
 			
 			controller!.whenCancelledOrFailed = { viewController, error in
-				viewController.dismissViewControllerAnimated(true, completion: nil)
+				viewController.dismiss(animated: true)
 				if let error = error {
 					viewController.presentingViewController?.c3_alert("Error", message: "\(error)")
 				}
@@ -70,11 +70,11 @@ class C3DemoQuestionnaire: C3Demo {
 			
 			// prepare the questionnaire: this downloads referenced values if necessary, hence the asynchronous callback
 			controller!.prepareQuestionnaireViewController() { viewController, error in
-				callback(view: viewController, error: error)
+				callback(viewController, error)
 			}
 		}
 		catch let error {
-			callback(view: nil, error: error)
+			callback(nil, error)
 		}
 	}
 }
