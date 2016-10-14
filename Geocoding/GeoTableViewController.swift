@@ -31,50 +31,50 @@ class GeoTableViewController: UITableViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "ButtonCell")
-		tableView.registerClass(GeoResultTableViewCell.self, forCellReuseIdentifier: "GeoCell")
+		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ButtonCell")
+		tableView.register(GeoResultTableViewCell.self, forCellReuseIdentifier: "GeoCell")
 	}
 	
 	
 	// MARK: - Table View Data Source
 	
-	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+	override func numberOfSections(in tableView: UITableView) -> Int {
 		return 2
 	}
 	
-	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return 0 == section ? 2 : 4
 	}
 	
-	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		if 0 == indexPath.section {
-			let cell = tableView.dequeueReusableCellWithIdentifier("ButtonCell", forIndexPath: indexPath)
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		if 0 == (indexPath as NSIndexPath).section {
+			let cell = tableView.dequeueReusableCell(withIdentifier: "ButtonCell", for: indexPath)
 			if geocoder.isGeocoding {
 				cell.textLabel?.text = "Geocoding..."
 			}
-			else if 0 == indexPath.row {
+			else if 0 == (indexPath as NSIndexPath).row {
 				cell.textLabel?.text = "Geocode"
 			}
-			else if 1 == indexPath.row {
+			else if 1 == (indexPath as NSIndexPath).row {
 				cell.textLabel?.text = "Geocode (HIPAA compliant)"
 			}
 			return cell
 		}
 		
-		let cell = tableView.dequeueReusableCellWithIdentifier("GeoCell", forIndexPath: indexPath)
-		if 0 == indexPath.row {
+		let cell = tableView.dequeueReusableCell(withIdentifier: "GeoCell", for: indexPath)
+		if 0 == (indexPath as NSIndexPath).row {
 			cell.textLabel?.text = "Country"
 			cell.detailTextLabel?.text = lastAddress?.country
 		}
-		else if 1 == indexPath.row {
+		else if 1 == (indexPath as NSIndexPath).row {
 			cell.textLabel?.text = "State"
 			cell.detailTextLabel?.text = lastAddress?.state
 		}
-		else if 2 == indexPath.row {
+		else if 2 == (indexPath as NSIndexPath).row {
 			cell.textLabel?.text = "City"
 			cell.detailTextLabel?.text = lastAddress?.city
 		}
-		else if 3 == indexPath.row {
+		else if 3 == (indexPath as NSIndexPath).row {
 			cell.textLabel?.text = "ZIP"
 			cell.detailTextLabel?.text = lastAddress?.postalCode
 		}
@@ -84,10 +84,10 @@ class GeoTableViewController: UITableViewController {
 	
 	// MARK: - Table View Delegate
 	
-	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		if 0 == indexPath.section {
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		if 0 == (indexPath as NSIndexPath).section {
 			if !geocoder.isGeocoding {
-				if 0 == indexPath.row {
+				if 0 == (indexPath as NSIndexPath).row {
 					geocoder.currentAddress() { address, error in
 						self.lastAddress = address
 						if let error = error {
@@ -105,17 +105,17 @@ class GeoTableViewController: UITableViewController {
 						self.tableView.reloadData()
 					}
 				}
-				tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: .None)
+				tableView.reloadSections(IndexSet(integer: 0), with: .none)
 			}
 		}
-		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+		tableView.deselectRow(at: indexPath, animated: true)
 	}
 }
 
 
 class GeoResultTableViewCell: UITableViewCell {
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-		super.init(style: UITableViewCellStyle.Value1, reuseIdentifier: reuseIdentifier)
+		super.init(style: UITableViewCellStyle.value1, reuseIdentifier: reuseIdentifier)
 	}
 
 	required init?(coder aDecoder: NSCoder) {

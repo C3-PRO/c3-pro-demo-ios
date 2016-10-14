@@ -48,35 +48,35 @@ class MasterViewController: UITableViewController {
 		]]
 	}
 	
-	override func viewWillAppear(animated: Bool) {
-		self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
+	override func viewWillAppear(_ animated: Bool) {
+		self.clearsSelectionOnViewWillAppear = self.splitViewController!.isCollapsed
 		super.viewWillAppear(animated)
 	}
 	
 	
 	// MARK: - Segues
 	
-	override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+	override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
 		if "showDetail" == identifier {
 			if let indexPath = self.tableView.indexPathForSelectedRow {
-				let demo = demos[indexPath.section][indexPath.row]
+				let demo = demos[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
 				return !demo.presentsModally
 			}
 		}
 		return true
 	}
 	
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if "showDetail" == segue.identifier {
 		    if let indexPath = self.tableView.indexPathForSelectedRow {
-				let demo = demos[indexPath.section][indexPath.row]
+				let demo = demos[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
 				do {
 					let viewController = try demo.viewController()
-					if let navi = segue.destinationViewController as? UINavigationController {
+					if let navi = segue.destination as? UINavigationController {
 						navi.viewControllers = [viewController]
 					}
 					else {
-						throw C3Error.InvalidStoryboard("Need navigation controller as root detail view controller")
+						throw C3Error.invalidStoryboard("Need navigation controller as root detail view controller")
 					}
 				}
 				catch let error {
@@ -89,28 +89,28 @@ class MasterViewController: UITableViewController {
 	
 	// MARK: - Table View
 	
-	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+	override func numberOfSections(in tableView: UITableView) -> Int {
 		return demos.count
 	}
 	
-	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return demos[section].count
 	}
 	
-	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-		let demo = demos[indexPath.section][indexPath.row]
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+		let demo = demos[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
 		cell.textLabel?.text = demo.title
-		cell.accessoryType = demo.presentsModally ? .None : .DisclosureIndicator
+		cell.accessoryType = demo.presentsModally ? .none : .disclosureIndicator
 		return cell
 	}
 	
-	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		let demo = demos[indexPath.section][indexPath.row]
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let demo = demos[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
 		if demo.presentsModally {
 			demo.viewController() { viewController, error in
 				if let viewController = viewController {
-					self.presentViewController(viewController, animated: true, completion: nil)
+					self.present(viewController, animated: true, completion: nil)
 				}
 				else if let error = error {
 					self.c3_alert("Something's Wrong", message: "\(error)")

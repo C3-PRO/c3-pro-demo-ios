@@ -3,6 +3,9 @@ C3-PRO iOS App Demo
 
 A simple iOS/Swift app demonstrating how the [C3-PRO iOS framework](https://github.com/chb/c3-pro-ios-framework) can be used.
 
+The `master` branch is on Swift 3 and FHIR DSTU-2, the `develop` branch is usually on newer versions of either Swift or FHIR.
+See git tags for specific versions.
+
 
 ## Learn
 
@@ -28,6 +31,7 @@ This can be cut down to a minimum so should not impose a barrier too high on tho
 
 
 ## Installation
+
 
 Clone this repository and you'll be able to Build & Run immediately:
 

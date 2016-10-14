@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE0BCD4E1C9028E700782325 /* Questionnaire-dates.json in Resources */ = {isa = PBXBuildFile; fileRef = EE0BCD4C1C9028E700782325 /* Questionnaire-dates.json */; };
-		EE0BCD4F1C9028E700782325 /* Questionnaire-textvalues.json in Resources */ = {isa = PBXBuildFile; fileRef = EE0BCD4D1C9028E700782325 /* Questionnaire-textvalues.json */; };
-		EE12094A1C1222B100E1D3CB /* Questionnaire-choices.json in Resources */ = {isa = PBXBuildFile; fileRef = EE1209491C1222B100E1D3CB /* Questionnaire-choices.json */; };
 		EE19B9851C6D2BC400B6F40F /* C3DemoSystemServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19B9841C6D2BC400B6F40F /* C3DemoSystemServices.swift */; };
 		EE19B9881C6D2C6D00B6F40F /* C3DemoConsenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19B9871C6D2C6D00B6F40F /* C3DemoConsenting.swift */; };
 		EE19B98A1C6D2CAE00B6F40F /* C3DemoQuestionnaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE19B9891C6D2CAE00B6F40F /* C3DemoQuestionnaire.swift */; };
+		EE5AD5F21DB1984A00BCFED0 /* choices.json in Resources */ = {isa = PBXBuildFile; fileRef = EE5AD5EE1DB1984A00BCFED0 /* choices.json */; };
+		EE5AD5F31DB1984A00BCFED0 /* dates.json in Resources */ = {isa = PBXBuildFile; fileRef = EE5AD5EF1DB1984A00BCFED0 /* dates.json */; };
+		EE5AD5F51DB1984A00BCFED0 /* text-and-values.json in Resources */ = {isa = PBXBuildFile; fileRef = EE5AD5F11DB1984A00BCFED0 /* text-and-values.json */; };
 		EE63C3C81C2304E300F2CE24 /* GeoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE63C3C71C2304E300F2CE24 /* GeoTableViewController.swift */; };
 		EE7DD4261C10E44A00CBD0E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DD4251C10E44A00CBD0E6 /* AppDelegate.swift */; };
 		EE7DD4281C10E44A00CBD0E6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7DD4271C10E44A00CBD0E6 /* MasterViewController.swift */; };
@@ -35,6 +35,12 @@
 		EE7DD4781C110CB800CBD0E6 /* video_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7DD4771C110CB800CBD0E6 /* video_icon.png */; };
 		EE7DD47B1C110D7500CBD0E6 /* 1_overview.html in Resources */ = {isa = PBXBuildFile; fileRef = EE7DD4791C110D7500CBD0E6 /* 1_overview.html */; };
 		EE7DD47C1C110D7500CBD0E6 /* 2_activity.html in Resources */ = {isa = PBXBuildFile; fileRef = EE7DD47A1C110D7500CBD0E6 /* 2_activity.html */; };
+		EEEAD0DD1DAF81C200A665CE /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEAD0DA1DAF81B600A665CE /* ResearchKit.framework */; };
+		EEEAD0DE1DAF81C200A665CE /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEEAD0DA1DAF81B600A665CE /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEEAD0E11DAF81C200A665CE /* SMART.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEAD0CC1DAF81A800A665CE /* SMART.framework */; };
+		EEEAD0E21DAF81C200A665CE /* SMART.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEEAD0CC1DAF81A800A665CE /* SMART.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEEAD0FD1DAF81EF00A665CE /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEEAD0F01DAF81EA00A665CE /* SQLite.framework */; };
+		EEEAD0FE1DAF81EF00A665CE /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEEAD0F01DAF81EA00A665CE /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +72,132 @@
 			remoteGlobalIDString = EEFA84BA1AE5C18B00E61006;
 			remoteInfo = C3PRO;
 		};
+		EEEAD0CB1DAF81A800A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE43B1A919546D880017679A;
+			remoteInfo = "SwiftSMART-iOS";
+		};
+		EEEAD0CD1DAF81A800A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE43B1B319546D880017679A;
+			remoteInfo = "SwiftSMART-iOSTests";
+		};
+		EEEAD0CF1DAF81A800A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EECAA7831A5D3DE60062C64B;
+			remoteInfo = "SwiftSMART-OSX";
+		};
+		EEEAD0D11DAF81A800A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE13AA921A5D44D100B901FD;
+			remoteInfo = "SwiftSMART-OSXTests";
+		};
+		EEEAD0D91DAF81B600A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0D31DAF81B500A665CE /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		EEEAD0DB1DAF81B600A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0D31DAF81B500A665CE /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		EEEAD0DF1DAF81C200A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0D31DAF81B500A665CE /* ResearchKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B183A4731A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		EEEAD0E31DAF81C200A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE43B1A819546D880017679A;
+			remoteInfo = "SwiftSMART-iOS";
+		};
+		EEEAD0EF1DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+		EEEAD0F11DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
+			remoteInfo = "SQLiteTests iOS";
+		};
+		EEEAD0F31DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
+			remoteInfo = "SQLite Mac";
+		};
+		EEEAD0F51DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
+			remoteInfo = "SQLiteTests Mac";
+		};
+		EEEAD0F71DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
+			remoteInfo = "SQLite tvOS";
+		};
+		EEEAD0F91DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
+			remoteInfo = "SQLiteTests tvOS";
+		};
+		EEEAD0FB1DAF81EA00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A121AC451CA35C79005A31D1;
+			remoteInfo = "SQLite watchOS";
+		};
+		EEEAD0FF1DAF81EF00A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE247AD21C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+		EEEAD1061DAF820300A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD1011DAF820300A665CE /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE45519693E190098E6F3;
+			remoteInfo = CryptoSwift;
+		};
+		EEEAD1081DAF820300A665CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEEAD1011DAF820300A665CE /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE46019693E190098E6F3;
+			remoteInfo = Tests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,7 +207,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EEEAD0DE1DAF81C200A665CE /* ResearchKit.framework in Embed Frameworks */,
 				EE7DD44B1C10E69C00CBD0E6 /* C3PRO.framework in Embed Frameworks */,
+				EEEAD0FE1DAF81EF00A665CE /* SQLite.framework in Embed Frameworks */,
+				EEEAD0E21DAF81C200A665CE /* SMART.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,15 +218,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EE0BCD4C1C9028E700782325 /* Questionnaire-dates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-dates.json"; path = "c3-pro-ios-framework/examples/Questionnaire/Questionnaire-dates.json"; sourceTree = SOURCE_ROOT; };
-		EE0BCD4D1C9028E700782325 /* Questionnaire-textvalues.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-textvalues.json"; path = "c3-pro-ios-framework/examples/Questionnaire/Questionnaire-textvalues.json"; sourceTree = SOURCE_ROOT; };
-		EE1209491C1222B100E1D3CB /* Questionnaire-choices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Questionnaire-choices.json"; path = "c3-pro-ios-framework/examples/Questionnaire/Questionnaire-choices.json"; sourceTree = SOURCE_ROOT; };
 		EE19B9841C6D2BC400B6F40F /* C3DemoSystemServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoSystemServices.swift; sourceTree = "<group>"; };
 		EE19B9871C6D2C6D00B6F40F /* C3DemoConsenting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoConsenting.swift; sourceTree = "<group>"; };
 		EE19B9891C6D2CAE00B6F40F /* C3DemoQuestionnaire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C3DemoQuestionnaire.swift; sourceTree = "<group>"; };
-		EE2AF4CF1D1ADDD900E6F5AD /* QuestionnaireResponse-choices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "QuestionnaireResponse-choices.json"; path = "c3-pro-ios-framework/examples/QuestionnaireResponse/QuestionnaireResponse-choices.json"; sourceTree = SOURCE_ROOT; };
-		EE2AF4D01D1ADDD900E6F5AD /* QuestionnaireResponse-dates.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "QuestionnaireResponse-dates.json"; path = "c3-pro-ios-framework/examples/QuestionnaireResponse/QuestionnaireResponse-dates.json"; sourceTree = SOURCE_ROOT; };
-		EE2AF4D11D1ADDD900E6F5AD /* QuestionnaireResponse-textvalues.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "QuestionnaireResponse-textvalues.json"; path = "c3-pro-ios-framework/examples/QuestionnaireResponse/QuestionnaireResponse-textvalues.json"; sourceTree = SOURCE_ROOT; };
+		EE5AD5EE1DB1984A00BCFED0 /* choices.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = choices.json; sourceTree = "<group>"; };
+		EE5AD5EF1DB1984A00BCFED0 /* dates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dates.json; sourceTree = "<group>"; };
+		EE5AD5F11DB1984A00BCFED0 /* text-and-values.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "text-and-values.json"; sourceTree = "<group>"; };
 		EE63C3C71C2304E300F2CE24 /* GeoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoTableViewController.swift; sourceTree = "<group>"; };
 		EE7DD4221C10E44A00CBD0E6 /* c3-pro-demo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "c3-pro-demo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE7DD4251C10E44A00CBD0E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +247,10 @@
 		EE7DD4771C110CB800CBD0E6 /* video_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_icon.png; sourceTree = "<group>"; };
 		EE7DD4791C110D7500CBD0E6 /* 1_overview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 1_overview.html; sourceTree = "<group>"; };
 		EE7DD47A1C110D7500CBD0E6 /* 2_activity.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = 2_activity.html; sourceTree = "<group>"; };
+		EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftSMART.xcodeproj; path = "c3-pro-ios-framework/Swift-SMART/SwiftSMART.xcodeproj"; sourceTree = "<group>"; };
+		EEEAD0D31DAF81B500A665CE /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "c3-pro-ios-framework/ResearchKit/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
+		EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "c3-pro-ios-framework/SQLiteSwift/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		EEEAD1011DAF820300A665CE /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = "c3-pro-ios-framework/CryptoSwift/CryptoSwift.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +258,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEEAD0DD1DAF81C200A665CE /* ResearchKit.framework in Frameworks */,
 				EE7DD44A1C10E69C00CBD0E6 /* C3PRO.framework in Frameworks */,
+				EEEAD0FD1DAF81EF00A665CE /* SQLite.framework in Frameworks */,
+				EEEAD0E11DAF81C200A665CE /* SMART.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,14 +271,12 @@
 		EE12094B1C1222B600E1D3CB /* Questionnaire */ = {
 			isa = PBXGroup;
 			children = (
-				EE1209491C1222B100E1D3CB /* Questionnaire-choices.json */,
-				EE2AF4CF1D1ADDD900E6F5AD /* QuestionnaireResponse-choices.json */,
-				EE0BCD4C1C9028E700782325 /* Questionnaire-dates.json */,
-				EE2AF4D01D1ADDD900E6F5AD /* QuestionnaireResponse-dates.json */,
-				EE0BCD4D1C9028E700782325 /* Questionnaire-textvalues.json */,
-				EE2AF4D11D1ADDD900E6F5AD /* QuestionnaireResponse-textvalues.json */,
+				EE5AD5EE1DB1984A00BCFED0 /* choices.json */,
+				EE5AD5EF1DB1984A00BCFED0 /* dates.json */,
+				EE5AD5F11DB1984A00BCFED0 /* text-and-values.json */,
 			);
 			name = Questionnaire;
+			path = "../c3-pro-ios-framework/examples/Questionnaire";
 			sourceTree = "<group>";
 		};
 		EE63C3C51C2304A600F2CE24 /* Geocoding */ = {
@@ -154,6 +291,10 @@
 		EE7DD4191C10E44A00CBD0E6 = {
 			isa = PBXGroup;
 			children = (
+				EEEAD1011DAF820300A665CE /* CryptoSwift.xcodeproj */,
+				EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */,
+				EEEAD0D31DAF81B500A665CE /* ResearchKit.xcodeproj */,
+				EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */,
 				EE7DD4241C10E44A00CBD0E6 /* c3-pro-demo-ios */,
 				EE7DD43B1C10E68800CBD0E6 /* C3PRO.xcodeproj */,
 				EE7DD4231C10E44A00CBD0E6 /* Products */,
@@ -225,6 +366,49 @@
 			path = EligibilityConsenting;
 			sourceTree = SOURCE_ROOT;
 		};
+		EEEAD0C41DAF81A800A665CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEEAD0CC1DAF81A800A665CE /* SMART.framework */,
+				EEEAD0CE1DAF81A800A665CE /* SwiftSMART-iOSTests.xctest */,
+				EEEAD0D01DAF81A800A665CE /* SMART.framework */,
+				EEEAD0D21DAF81A800A665CE /* SwiftSMART-macOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEEAD0D41DAF81B500A665CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEEAD0DA1DAF81B600A665CE /* ResearchKit.framework */,
+				EEEAD0DC1DAF81B600A665CE /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEEAD0E61DAF81E900A665CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEEAD0F01DAF81EA00A665CE /* SQLite.framework */,
+				EEEAD0F21DAF81EA00A665CE /* SQLiteTests iOS.xctest */,
+				EEEAD0F41DAF81EA00A665CE /* SQLite.framework */,
+				EEEAD0F61DAF81EA00A665CE /* SQLiteTests Mac.xctest */,
+				EEEAD0F81DAF81EA00A665CE /* SQLite.framework */,
+				EEEAD0FA1DAF81EA00A665CE /* SQLiteTests tvOS.xctest */,
+				EEEAD0FC1DAF81EA00A665CE /* SQLite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEEAD1021DAF820300A665CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEEAD1071DAF820300A665CE /* CryptoSwift.framework */,
+				EEEAD1091DAF820300A665CE /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,6 +426,9 @@
 			dependencies = (
 				EE7DD4491C10E69600CBD0E6 /* PBXTargetDependency */,
 				EE7DD44D1C10E69C00CBD0E6 /* PBXTargetDependency */,
+				EEEAD0E01DAF81C200A665CE /* PBXTargetDependency */,
+				EEEAD0E41DAF81C200A665CE /* PBXTargetDependency */,
+				EEEAD1001DAF81EF00A665CE /* PBXTargetDependency */,
 			);
 			name = "c3-pro-demo-ios";
 			productName = "c3-pro-demo-ios";
@@ -255,11 +442,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Boston Children's Hospital";
 				TargetAttributes = {
 					EE7DD4211C10E44A00CBD0E6 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = Q3B26TNSSH;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -278,6 +467,22 @@
 				{
 					ProductGroup = EE7DD43C1C10E68800CBD0E6 /* Products */;
 					ProjectRef = EE7DD43B1C10E68800CBD0E6 /* C3PRO.xcodeproj */;
+				},
+				{
+					ProductGroup = EEEAD1021DAF820300A665CE /* Products */;
+					ProjectRef = EEEAD1011DAF820300A665CE /* CryptoSwift.xcodeproj */;
+				},
+				{
+					ProductGroup = EEEAD0D41DAF81B500A665CE /* Products */;
+					ProjectRef = EEEAD0D31DAF81B500A665CE /* ResearchKit.xcodeproj */;
+				},
+				{
+					ProductGroup = EEEAD0E61DAF81E900A665CE /* Products */;
+					ProjectRef = EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */;
+				},
+				{
+					ProductGroup = EEEAD0C41DAF81A800A665CE /* Products */;
+					ProjectRef = EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -302,6 +507,111 @@
 			remoteRef = EE7DD4461C10E68900CBD0E6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		EEEAD0CC1DAF81A800A665CE /* SMART.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SMART.framework;
+			remoteRef = EEEAD0CB1DAF81A800A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0CE1DAF81A800A665CE /* SwiftSMART-iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftSMART-iOSTests.xctest";
+			remoteRef = EEEAD0CD1DAF81A800A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0D01DAF81A800A665CE /* SMART.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SMART.framework;
+			remoteRef = EEEAD0CF1DAF81A800A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0D21DAF81A800A665CE /* SwiftSMART-macOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftSMART-macOSTests.xctest";
+			remoteRef = EEEAD0D11DAF81A800A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0DA1DAF81B600A665CE /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = EEEAD0D91DAF81B600A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0DC1DAF81B600A665CE /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = EEEAD0DB1DAF81B600A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0F01DAF81EA00A665CE /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = EEEAD0EF1DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0F21DAF81EA00A665CE /* SQLiteTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests iOS.xctest";
+			remoteRef = EEEAD0F11DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0F41DAF81EA00A665CE /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = EEEAD0F31DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0F61DAF81EA00A665CE /* SQLiteTests Mac.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests Mac.xctest";
+			remoteRef = EEEAD0F51DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0F81DAF81EA00A665CE /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = EEEAD0F71DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0FA1DAF81EA00A665CE /* SQLiteTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests tvOS.xctest";
+			remoteRef = EEEAD0F91DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD0FC1DAF81EA00A665CE /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = EEEAD0FB1DAF81EA00A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD1071DAF820300A665CE /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = EEEAD1061DAF820300A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EEEAD1091DAF820300A665CE /* Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.xctest;
+			remoteRef = EEEAD1081DAF820300A665CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -311,20 +621,20 @@
 			files = (
 				EE7DD45B1C10E88400CBD0E6 /* Intro.css in Resources */,
 				EE7DD4701C1103D500CBD0E6 /* logo_disease_researchInstitute@2x.png in Resources */,
+				EE5AD5F51DB1984A00BCFED0 /* text-and-values.json in Resources */,
 				EE7DD45C1C10E88400CBD0E6 /* Intro_about.html in Resources */,
-				EE0BCD4F1C9028E700782325 /* Questionnaire-textvalues.json in Resources */,
 				EE7DD4601C10E88400CBD0E6 /* StudyIntro.storyboard in Resources */,
 				EE7DD4321C10E44A00CBD0E6 /* LaunchScreen.storyboard in Resources */,
-				EE0BCD4E1C9028E700782325 /* Questionnaire-dates.json in Resources */,
+				EE5AD5F31DB1984A00BCFED0 /* dates.json in Resources */,
 				EE7DD45F1C10E88400CBD0E6 /* StudyIntro.json in Resources */,
 				EE7DD46E1C11033400CBD0E6 /* logo_disease_large@2x.png in Resources */,
 				EE7DD46C1C10F51B00CBD0E6 /* Consent_sharing.html in Resources */,
 				EE7DD47B1C110D7500CBD0E6 /* 1_overview.html in Resources */,
+				EE5AD5F21DB1984A00BCFED0 /* choices.json in Resources */,
 				EE7DD4641C10EC9E00CBD0E6 /* Consent.json in Resources */,
 				EE7DD4651C10EC9E00CBD0E6 /* Consent.pdf in Resources */,
 				EE7DD42D1C10E44A00CBD0E6 /* Main.storyboard in Resources */,
 				EE7DD47C1C110D7500CBD0E6 /* 2_activity.html in Resources */,
-				EE12094A1C1222B100E1D3CB /* Questionnaire-choices.json in Resources */,
 				EE7DD45D1C10E88400CBD0E6 /* Intro_eligibility.html in Resources */,
 				EE7DD4781C110CB800CBD0E6 /* video_icon.png in Resources */,
 				EE7DD45E1C10E88400CBD0E6 /* Intro_howstuffworks.html in Resources */,
@@ -361,6 +671,21 @@
 			name = C3PRO;
 			targetProxy = EE7DD44C1C10E69C00CBD0E6 /* PBXContainerItemProxy */;
 		};
+		EEEAD0E01DAF81C200A665CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResearchKit;
+			targetProxy = EEEAD0DF1DAF81C200A665CE /* PBXContainerItemProxy */;
+		};
+		EEEAD0E41DAF81C200A665CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftSMART-iOS";
+			targetProxy = EEEAD0E31DAF81C200A665CE /* PBXContainerItemProxy */;
+		};
+		EEEAD1001DAF81EF00A665CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SQLite iOS";
+			targetProxy = EEEAD0FF1DAF81EF00A665CE /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -396,8 +721,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -441,8 +768,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -461,6 +790,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -469,24 +799,28 @@
 		EE7DD4371C10E44A00CBD0E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = Q3B26TNSSH;
 				INFOPLIST_FILE = "c3-pro-demo-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.chip.c3-pro.c3-pro-demo-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		EE7DD4381C10E44A00CBD0E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = Q3B26TNSSH;
 				INFOPLIST_FILE = "c3-pro-demo-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.chip.c3-pro.c3-pro-demo-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

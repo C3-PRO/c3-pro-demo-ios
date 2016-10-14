@@ -26,11 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 	var window: UIWindow?
 
 
-	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		let splitViewController = self.window!.rootViewController as! UISplitViewController
 		let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
-		navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
+		navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
 		splitViewController.delegate = self
 		return true
 	}
@@ -42,13 +42,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 		print("You were just notified that the user consented. Now you want to show your app's setup process (set PIN, grant permissions).")
 		let splitViewController = self.window!.rootViewController as! UISplitViewController
 		let navi = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
-		navi.popToRootViewControllerAnimated(true)
+		navi.popToRootViewController(animated: true)
 	}
 	
 
 	// MARK: - Split view
 
-	func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {
+	func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
 	    guard secondaryViewController is UINavigationController else { return false }
 		// Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
 		return true
@@ -57,10 +57,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 
 extension UIViewController {
-	func c3_alert(title: String, message: String, animated: Bool = true) {
-		let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-		alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
-		presentViewController(alert, animated: animated, completion: nil)
+	func c3_alert(_ title: String, message: String, animated: Bool = true) {
+		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+		present(alert, animated: animated, completion: nil)
 	}
 }
 

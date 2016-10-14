@@ -22,12 +22,16 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSHealthShareUsageDescription</key>
+	<string>So we can receive your health data</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We'd like to use your location to determine the state you live in</string>
+	<key>NSMotionUsageDescription</key>
+	<string>So we can receive activity data from your device</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We&apos;d like to use your location to determine the state you live in</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
