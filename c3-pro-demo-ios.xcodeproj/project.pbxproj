@@ -291,13 +291,13 @@
 		EE7DD4191C10E44A00CBD0E6 = {
 			isa = PBXGroup;
 			children = (
+				EE7DD4241C10E44A00CBD0E6 /* c3-pro-demo-ios */,
+				EE7DD43B1C10E68800CBD0E6 /* C3PRO.xcodeproj */,
+				EE7DD4231C10E44A00CBD0E6 /* Products */,
 				EEEAD1011DAF820300A665CE /* CryptoSwift.xcodeproj */,
 				EEEAD0E51DAF81E900A665CE /* SQLite.xcodeproj */,
 				EEEAD0D31DAF81B500A665CE /* ResearchKit.xcodeproj */,
 				EEEAD0C31DAF81A800A665CE /* SwiftSMART.xcodeproj */,
-				EE7DD4241C10E44A00CBD0E6 /* c3-pro-demo-ios */,
-				EE7DD43B1C10E68800CBD0E6 /* C3PRO.xcodeproj */,
-				EE7DD4231C10E44A00CBD0E6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
